@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendario y posiciones — Fut-Time CR</title>
+  <meta name="description" content="Fixture de partidos y tabla de posiciones de la Copa Fut-Time Apertura 2026 en Heredia, Costa Rica." />
+  <link rel="icon" type="image/jpeg" href="assets/fut-time-logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/fut-time-logo.jpeg" alt="Fut-Time" />
+        <span class="brand-txt">FUT-TIME <span class="accent">CR</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Inicio</a>
+        <a href="formato.html">Formato</a>
+        <a href="calendario.html" class="active">Calendario</a>
+        <a href="inscripcion.html">Inscripción</a>
+      </div>
+      <div class="nav-cta">
+        <a href="inscripcion.html" class="btn btn-primary">Inscribí tu equipo</a>
+        <button class="nav-toggle" onclick="toggleNav()" aria-label="Menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEAD ===== -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Apertura 2026 · Fut7 Libre</span>
+        <h2>Calendario de partidos</h2>
+        <p>Fixture oficial de la fase de grupos. Los horarios se confirman por WhatsApp cada semana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FIXTURE ===== -->
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+
+      <div class="jornada-title reveal">
+        <span class="jt">Jornada 1</span><span class="line"></span><span class="date">Sáb 26 jul</span>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead><tr><th>Hora</th><th>Local</th><th></th><th>Visitante</th><th>Resultado</th></tr></thead>
+          <tbody>
+            <tr><td>9:00</td><td><span class="team-cell"><span class="dot" style="background:#1e2dbe">DC</span>Deportivo Centro</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#c0392b">LH</span>Los Halcones</span></td><td><span class="badge win">4 - 2</span></td></tr>
+            <tr><td>10:00</td><td><span class="team-cell"><span class="dot" style="background:#16a085">RV</span>Real Vargas</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#8e44ad">AU</span>Atlético Uruca</span></td><td><span class="badge win">1 - 1</span></td></tr>
+            <tr><td>11:00</td><td><span class="team-cell"><span class="dot" style="background:#e67e22">TF</span>Tigres FC</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#2c3e50">SM</span>Sporting Mercedes</span></td><td><span class="badge win">3 - 0</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="jornada-title reveal">
+        <span class="jt">Jornada 2</span><span class="line"></span><span class="date">Sáb 2 ago</span>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead><tr><th>Hora</th><th>Local</th><th></th><th>Visitante</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>9:00</td><td><span class="team-cell"><span class="dot" style="background:#c0392b">LH</span>Los Halcones</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#16a085">RV</span>Real Vargas</span></td><td><span class="badge live">En vivo</span></td></tr>
+            <tr><td>10:00</td><td><span class="team-cell"><span class="dot" style="background:#8e44ad">AU</span>Atlético Uruca</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#e67e22">TF</span>Tigres FC</span></td><td><span class="badge soon">Por jugar</span></td></tr>
+            <tr><td>11:00</td><td><span class="team-cell"><span class="dot" style="background:#2c3e50">SM</span>Sporting Mercedes</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#1e2dbe">DC</span>Deportivo Centro</span></td><td><span class="badge soon">Por jugar</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="jornada-title reveal">
+        <span class="jt">Jornada 3</span><span class="line"></span><span class="date">Sáb 9 ago</span>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead><tr><th>Hora</th><th>Local</th><th></th><th>Visitante</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>9:00</td><td><span class="team-cell"><span class="dot" style="background:#1e2dbe">DC</span>Deportivo Centro</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#8e44ad">AU</span>Atlético Uruca</span></td><td><span class="badge soon">Por jugar</span></td></tr>
+            <tr><td>10:00</td><td><span class="team-cell"><span class="dot" style="background:#e67e22">TF</span>Tigres FC</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#c0392b">LH</span>Los Halcones</span></td><td><span class="badge soon">Por jugar</span></td></tr>
+            <tr><td>11:00</td><td><span class="team-cell"><span class="dot" style="background:#16a085">RV</span>Real Vargas</span></td><td class="vs">vs</td><td><span class="team-cell"><span class="dot" style="background:#2c3e50">SM</span>Sporting Mercedes</span></td><td><span class="badge soon">Por jugar</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TABLA DE POSICIONES ===== -->
+  <section class="section" id="posiciones" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Grupo único</span>
+        <h2 style="font-size:2.2rem">Tabla de posiciones</h2>
+        <p>Los dos primeros avanzan directo a semifinales.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th></tr>
+          </thead>
+          <tbody>
+            <tr class="pos-top"><td class="pos-1">1</td><td><span class="team-cell"><span class="dot" style="background:#1e2dbe">DC</span>Deportivo Centro</span></td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>2</td><td>+2</td><td><strong>3</strong></td></tr>
+            <tr class="pos-top"><td class="pos-1">2</td><td><span class="team-cell"><span class="dot" style="background:#e67e22">TF</span>Tigres FC</span></td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>0</td><td>+3</td><td><strong>3</strong></td></tr>
+            <tr><td>3</td><td><span class="team-cell"><span class="dot" style="background:#16a085">RV</span>Real Vargas</span></td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+            <tr><td>4</td><td><span class="team-cell"><span class="dot" style="background:#8e44ad">AU</span>Atlético Uruca</span></td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+            <tr><td>5</td><td><span class="team-cell"><span class="dot" style="background:#c0392b">LH</span>Los Halcones</span></td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>4</td><td>-2</td><td><strong>0</strong></td></tr>
+            <tr><td>6</td><td><span class="team-cell"><span class="dot" style="background:#2c3e50">SM</span>Sporting Mercedes</span></td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>3</td><td>-3</td><td><strong>0</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="text-align:center;margin-top:18px;font-size:0.85rem">PJ: jugados · G: ganados · E: empatados · P: perdidos · GF/GC: goles · DG: diferencia · Pts: puntos. Datos de demostración.</p>
+    </div>
+  </section>
+
+  <!-- ===== GOLEADORES ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Tabla de artilleros</span>
+        <h2 style="font-size:2.2rem">Goleadores</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal" style="text-align:center;border-color:rgba(255,210,74,0.4)"><div class="ico" style="background:rgba(255,210,74,0.14)">👟</div><h3>3 goles</h3><p>K. Jiménez · Deportivo Centro</p></div>
+        <div class="card reveal" style="text-align:center"><div class="ico">👟</div><h3>2 goles</h3><p>D. Mora · Tigres FC</p></div>
+        <div class="card reveal" style="text-align:center"><div class="ico">👟</div><h3>2 goles</h3><p>A. Rojas · Deportivo Centro</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2>¿Querés a tu equipo en esta tabla?</h2>
+        <p>Todavía quedan cupos para la próxima edición.</p>
+        <a href="inscripcion.html" class="btn btn-ghost">Inscribir equipo →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand"><img src="assets/fut-time-logo.jpeg" alt="Fut-Time" /></a>
+          <p>Torneos de fútbol amateur en Heredia, Costa Rica. Competí, hacé comunidad y viví el fútbol como se debe.</p>
+          <div class="social-row">
+            <a href="https://www.instagram.com/fut.time.cr/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+            <a href="https://www.facebook.com/Fut.Time.Tournamentes/" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+            <a href="https://wa.me/50688888888" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div>
+          <h4>Torneo</h4>
+          <ul>
+            <li><a href="formato.html">Formato y categorías</a></li>
+            <li><a href="formato.html#reglas">Reglas</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="calendario.html#posiciones">Tabla de posiciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="inscripcion.html">Inscribir equipo</a></li>
+            <li><a href="https://wa.me/50688888888" target="_blank" rel="noopener">WhatsApp: 8888-8888</a></li>
+            <li><a href="mailto:info@futtime.cr">info@futtime.cr</a></li>
+            <li>Heredia, Costa Rica</li>
+          </ul>
+        </div>
+      </div>
+      <div class="powered">
+        <span class="copy">© 2026 Fut-Time Tournament · Todos los derechos reservados</span>
+        <a class="powered-by" href="https://www.instagram.com/nuva.ia/" target="_blank" rel="noopener" title="Sitio creado por Nuva IA">
+          <span>Powered by</span>
+          <img src="assets/nuva-ai-white.svg" alt="Nuva IA" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

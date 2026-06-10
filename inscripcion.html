@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscripción y contacto — Fut-Time CR</title>
+  <meta name="description" content="Inscribí tu equipo en los torneos Fut-Time de Heredia, Costa Rica. Contactanos por WhatsApp, Instagram o Facebook." />
+  <link rel="icon" type="image/jpeg" href="assets/fut-time-logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/fut-time-logo.jpeg" alt="Fut-Time" />
+        <span class="brand-txt">FUT-TIME <span class="accent">CR</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Inicio</a>
+        <a href="formato.html">Formato</a>
+        <a href="calendario.html">Calendario</a>
+        <a href="inscripcion.html" class="active">Inscripción</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#form" class="btn btn-primary">Inscribí tu equipo</a>
+        <button class="nav-toggle" onclick="toggleNav()" aria-label="Menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEAD ===== -->
+  <section class="section" style="padding-bottom:30px">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Sumate al torneo</span>
+        <h2>Inscribí tu equipo</h2>
+        <p>Completá el formulario y te contactamos por WhatsApp para confirmar el cupo y el método de pago.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORM + CONTACTO ===== -->
+  <section class="section" id="form" style="padding-top:0">
+    <div class="container">
+      <div class="form-grid">
+
+        <!-- Formulario -->
+        <div class="form-card reveal">
+          <form id="inscripcionForm">
+            <div class="field">
+              <label for="equipo">Nombre del equipo *</label>
+              <input type="text" id="equipo" name="equipo" placeholder="Ej. Deportivo Centro" required />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="capitan">Capitán *</label>
+                <input type="text" id="capitan" name="capitan" placeholder="Nombre completo" required />
+              </div>
+              <div class="field">
+                <label for="tel">WhatsApp *</label>
+                <input type="tel" id="tel" name="tel" placeholder="8888-8888" required />
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="modalidad">Modalidad *</label>
+                <select id="modalidad" name="modalidad" required>
+                  <option value="">Elegí…</option>
+                  <option>Fut5</option>
+                  <option>Fut7</option>
+                  <option>Fut11</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="categoria">Categoría *</label>
+                <select id="categoria" name="categoria" required>
+                  <option value="">Elegí…</option>
+                  <option>Libre Masculina</option>
+                  <option>Libre Femenina</option>
+                  <option>Master +35</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Correo (opcional)</label>
+              <input type="email" id="email" name="email" placeholder="tuequipo@correo.com" />
+            </div>
+            <div class="field">
+              <label for="msg">¿Algo que debamos saber?</label>
+              <textarea id="msg" name="msg" rows="3" placeholder="Cantidad de jugadores, horario preferido, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Enviar pre-inscripción</button>
+            <div class="form-msg" id="formMsg"></div>
+          </form>
+        </div>
+
+        <!-- Contacto -->
+        <div class="contact-side reveal">
+          <h3 style="font-size:1.4rem;margin-bottom:18px">¿Preferís escribirnos?</h3>
+          <a href="https://wa.me/50688888888?text=Hola%20Fut-Time,%20quiero%20inscribir%20mi%20equipo" target="_blank" rel="noopener" class="contact-item">
+            <div class="ci-ico">💬</div>
+            <div class="ci-txt"><small>WhatsApp · respuesta inmediata</small><strong>8888-8888</strong></div>
+          </a>
+          <a href="https://www.instagram.com/fut.time.cr/" target="_blank" rel="noopener" class="contact-item">
+            <div class="ci-ico">📷</div>
+            <div class="ci-txt"><small>Instagram</small><strong>@fut.time.cr</strong></div>
+          </a>
+          <a href="https://www.facebook.com/Fut.Time.Tournamentes/" target="_blank" rel="noopener" class="contact-item">
+            <div class="ci-ico">📘</div>
+            <div class="ci-txt"><small>Facebook</small><strong>Fut-Time Tournament</strong></div>
+          </a>
+          <a href="mailto:info@futtime.cr" class="contact-item">
+            <div class="ci-ico">✉️</div>
+            <div class="ci-txt"><small>Correo</small><strong>info@futtime.cr</strong></div>
+          </a>
+          <div class="contact-item" style="cursor:default">
+            <div class="ci-ico">📍</div>
+            <div class="ci-txt"><small>Ubicación</small><strong>Heredia, Costa Rica</strong></div>
+          </div>
+
+          <div style="margin-top:24px;padding:20px;border:1px dashed var(--line);border-radius:14px;background:rgba(58,77,255,0.06)">
+            <strong style="display:block;margin-bottom:6px">⚡ Inscripción automatizada</strong>
+            <p class="muted" style="font-size:0.88rem;margin:0">Cada pre-inscripción puede caer directo en WhatsApp y una hoja de cálculo, sin trabajo manual. <em>(Funciona con la automatización de Nuva IA.)</em></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand"><img src="assets/fut-time-logo.jpeg" alt="Fut-Time" /></a>
+          <p>Torneos de fútbol amateur en Heredia, Costa Rica. Competí, hacé comunidad y viví el fútbol como se debe.</p>
+          <div class="social-row">
+            <a href="https://www.instagram.com/fut.time.cr/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+            <a href="https://www.facebook.com/Fut.Time.Tournamentes/" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+            <a href="https://wa.me/50688888888" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div>
+          <h4>Torneo</h4>
+          <ul>
+            <li><a href="formato.html">Formato y categorías</a></li>
+            <li><a href="formato.html#reglas">Reglas</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="calendario.html#posiciones">Tabla de posiciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="inscripcion.html">Inscribir equipo</a></li>
+            <li><a href="https://wa.me/50688888888" target="_blank" rel="noopener">WhatsApp: 8888-8888</a></li>
+            <li><a href="mailto:info@futtime.cr">info@futtime.cr</a></li>
+            <li>Heredia, Costa Rica</li>
+          </ul>
+        </div>
+      </div>
+      <div class="powered">
+        <span class="copy">© 2026 Fut-Time Tournament · Todos los derechos reservados</span>
+        <a class="powered-by" href="https://www.instagram.com/nuva.ia/" target="_blank" rel="noopener" title="Sitio creado por Nuva IA">
+          <span>Powered by</span>
+          <img src="assets/nuva-ai-white.svg" alt="Nuva IA" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
