@@ -3,113 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fut-Time CR — Torneos de fútbol en Heredia, Costa Rica</title>
-  <meta name="description" content="Fut-Time Tournament: los mejores torneos de fútbol en Heredia, Costa Rica. Inscribí tu equipo en Fut5, Fut7 o Fut11. Premios, fixtures y mucha pasión." />
-  <link rel="icon" type="image/jpeg" href="assets/fut-time-logo.jpeg" />
+  <title>Fut-Time Tournament — Torneos de fútbol en Heredia, Costa Rica</title>
+  <meta name="description" content="Fut-Time Tournament: los torneos de fútbol más competitivos y bien organizados de Heredia, Costa Rica. Armá tu equipo en Fut5, Fut7 o Fut11. Premios, fixtures y pura pasión." />
+  <link rel="icon" type="image/png" href="assets/fut-time-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="app.css" />
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/fut-time-logo.jpeg" alt="Fut-Time" />
-        <span class="brand-txt">FUT-TIME <span class="accent">CR</span></span>
+    <div class="wrap nav-in">
+      <a href="#top" class="brand">
+        <img src="assets/fut-time-logo.png" alt="Fut-Time" />
+        <b>FUT-TIME <span class="accent">CR</span></b>
       </a>
       <div class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="formato.html">Formato</a>
-        <a href="calendario.html">Calendario</a>
-        <a href="inscripcion.html">Inscripción</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#torneo">Torneo</a>
+        <a href="#momentos">Momentos</a>
+        <a href="#inscripcion">Inscripción</a>
       </div>
-      <div class="nav-cta">
-        <a href="inscripcion.html" class="btn btn-primary">Inscribí tu equipo</a>
+      <div class="nav-right">
+        <a href="#inscripcion" class="btn btn-primary">Inscribí tu equipo</a>
         <button class="nav-toggle" onclick="toggleNav()" aria-label="Menú">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
-  <header class="hero">
-    <div class="container hero-grid">
+  <header class="hero" id="top">
+    <div class="hero-blob"></div>
+    <div class="hero-lines"></div>
+    <div class="wrap hero-grid">
       <div class="reveal">
-        <span class="eyebrow">⚽ Torneos en Heredia · Costa Rica</span>
-        <h1>Donde nace<br>la <span class="accent">pasión</span><br>por el fútbol</h1>
-        <p class="lead">Organizamos los torneos más competitivos y bien gestionados de la zona. Armá tu equipo, sumá tus amigos y vení a jugar. Cupos limitados por categoría.</p>
-        <div class="hero-actions">
-          <a href="inscripcion.html" class="btn btn-primary">Inscribir mi equipo →</a>
-          <a href="formato.html" class="btn btn-ghost">Ver formato</a>
+        <span class="chip">⚽ Heredia · Costa Rica</span>
+        <h1>El fútbol<br>se juega<br><span class="stroke">en serio.</span></h1>
+        <p class="lead">Fut-Time Tournament organiza los torneos amateur más competitivos y mejor gestionados de la zona. Armá tu equipo, sumá a la mara y vení a dejarlo todo en la cancha.</p>
+        <div class="hero-cta">
+          <a href="#inscripcion" class="btn btn-primary btn-lg">Inscribir mi equipo →</a>
+          <a href="#modalidades" class="btn btn-ghost btn-lg">Ver modalidades</a>
+        </div>
+        <div class="hero-mini">
+          <div class="m"><b>+120</b><span>Equipos</span></div>
+          <div class="m"><b>+1.800</b><span>Jugadores</span></div>
+          <div class="m"><b>3</b><span>Modalidades</span></div>
         </div>
       </div>
-      <div class="hero-logo reveal">
-        <img src="assets/fut-time-logo.jpeg" alt="Escudo Fut-Time Tournament" />
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="stats reveal">
-        <div class="stat"><div class="num">+120</div><div class="lbl">Equipos</div></div>
-        <div class="stat"><div class="num">+1.800</div><div class="lbl">Jugadores</div></div>
-        <div class="stat"><div class="num">3</div><div class="lbl">Modalidades</div></div>
-        <div class="stat"><div class="num">₡500k</div><div class="lbl">En premios</div></div>
+      <div class="hero-art reveal">
+        <div class="disc"></div>
+        <img class="hero-logo" src="assets/fut-time-logo.png" alt="Escudo Fut-Time Tournament" />
+        <div class="hero-card">
+          <span class="live"><span class="pulse"></span> Inscripciones abiertas</span>
+          <div class="hero-card-stats">
+            <div class="hcs"><b>★ 4.9</b><span>Valoración</span></div>
+            <span class="hcs-div"></span>
+            <div class="hcs"><b>+120</b><span>Equipos</span></div>
+            <span class="hcs-div"></span>
+            <div class="hcs"><b>'26</b><span>Apertura</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- ===== COUNTDOWN ===== -->
-  <section class="countdown-section">
-    <div class="container">
-      <div class="countdown-card reveal">
-        <span class="eyebrow" style="color:var(--blue-soft)">Próximo torneo</span>
-        <h2>Copa Fut-Time — Apertura 2026</h2>
-        <p class="sub">Arranca el sábado 26 de julio · Cancha sintética, Heredia centro</p>
-        <div class="countdown" id="countdown">
-          <div class="cd-box"><div class="cd-num" id="cd-d">00</div><div class="cd-lbl">Días</div></div>
-          <div class="cd-box"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">Horas</div></div>
-          <div class="cd-box"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl">Min</div></div>
-          <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl">Seg</div></div>
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>FUT5 <i class="dot">●</i> FUT7 <i class="dot">●</i> FUT11 <i class="dot">●</i> HEREDIA <i class="dot">●</i> ÁRBITROS CERTIFICADOS <i class="dot">●</i> PREMIOS REALES <i class="dot">●</i> CANCHA SINTÉTICA <i class="dot">●</i></span>
+      <span>FUT5 <i class="dot">●</i> FUT7 <i class="dot">●</i> FUT11 <i class="dot">●</i> HEREDIA <i class="dot">●</i> ÁRBITROS CERTIFICADOS <i class="dot">●</i> PREMIOS REALES <i class="dot">●</i> CANCHA SINTÉTICA <i class="dot">●</i></span>
+    </div>
+  </div>
+
+  <!-- ===== MODALIDADES ===== -->
+  <section class="section" id="modalidades">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="chip outline">Elegí tu formato</span>
+        <h2>Tres modalidades, una sola pasión</h2>
+        <p>Sea cual sea tu equipo, tenemos un torneo para vos. Precios por equipo, todo incluido.</p>
+      </div>
+      <div class="grid g3">
+        <div class="mode reveal">
+          <div class="num">5<small>vs 5 · FUTSAL</small></div>
+          <h3>Fut5</h3>
+          <p class="desc">Rápido, técnico y de mucho gol. Ideal para equipos chicos que quieren acción sin parar.</p>
+          <ul>
+            <li>Partidos de 2 x 20 min</li>
+            <li>Plantilla de hasta 8 jugadores</li>
+            <li>Cancha cerrada sintética</li>
+          </ul>
+          <div class="price">₡45.000 <small>/ equipo</small></div>
         </div>
-        <div style="margin-top:32px">
-          <a href="inscripcion.html" class="btn btn-primary">Asegurá tu cupo</a>
+        <div class="mode featured reveal">
+          <span class="tag">★ Más popular</span>
+          <div class="num">7<small>vs 7 · FÚTBOL 7</small></div>
+          <h3>Fut7</h3>
+          <p class="desc">El equilibrio perfecto entre táctica y ritmo. La modalidad estrella de Fut-Time.</p>
+          <ul>
+            <li>Partidos de 2 x 25 min</li>
+            <li>Plantilla de hasta 12 jugadores</li>
+            <li>Tabla de posiciones + playoffs</li>
+          </ul>
+          <div class="price">₡70.000 <small>/ equipo</small></div>
         </div>
+        <div class="mode reveal">
+          <div class="num">11<small>vs 11 · FÚTBOL 11</small></div>
+          <h3>Fut11</h3>
+          <p class="desc">El fútbol de toda la vida. Cancha grande, gradas llenas y la gloria en juego.</p>
+          <ul>
+            <li>Partidos de 2 x 35 min</li>
+            <li>Plantilla de hasta 18 jugadores</li>
+            <li>Fase de grupos + eliminatorias</li>
+          </ul>
+          <div class="price">₡110.000 <small>/ equipo</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO FUNCIONA ===== -->
+  <section class="section" id="como" style="padding-top:0">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="chip outline">Así de fácil</span>
+        <h2>De la idea a la cancha en 4 pasos</h2>
+      </div>
+      <div class="grid g4 steps">
+        <div class="step reveal"><h3>Armá tu equipo</h3><p>Juntá a tus amigos, ponele nombre al equipo y elegí la modalidad que más te gusta.</p></div>
+        <div class="step reveal"><h3>Inscribite</h3><p>Llená el formulario o escribinos por WhatsApp. Asegurá tu cupo con el pago del equipo.</p></div>
+        <div class="step reveal"><h3>Jugá el torneo</h3><p>Recibís el fixture, los horarios y la cancha. Nosotros ponemos árbitros, balones y todo lo demás.</p></div>
+        <div class="step reveal"><h3>Llevate la copa</h3><p>Sumá puntos, avanzá a playoffs y peleá por trofeos, medallas y premios en efectivo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TORNEO + COUNTDOWN (sección oscura) ===== -->
+  <section class="section tourney" id="torneo">
+    <div class="wrap">
+      <span class="chip dark reveal">🏆 Próximo torneo</span>
+      <h2 class="reveal" style="margin-top:16px">Copa Fut-Time — Apertura 2026</h2>
+      <p class="sub reveal">Arranca el sábado 26 de julio · Cancha sintética, Heredia centro · Cupos limitados</p>
+      <div class="countdown reveal" id="countdown">
+        <div class="cd"><b id="cd-d">00</b><span>Días</span></div>
+        <div class="cd"><b id="cd-h">00</b><span>Horas</span></div>
+        <div class="cd"><b id="cd-m">00</b><span>Min</span></div>
+        <div class="cd"><b id="cd-s">00</b><span>Seg</span></div>
+      </div>
+      <div class="reveal" style="display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
+        <a href="#inscripcion" class="btn btn-lime btn-lg">Asegurá tu cupo</a>
+        <a href="https://wa.me/50688888888?text=Hola%20Fut-Time,%20quiero%20info%20de%20la%20Copa%20Apertura%202026" target="_blank" rel="noopener" class="btn btn-wa btn-lg">💬 Consultar por WhatsApp</a>
       </div>
     </div>
   </section>
 
   <!-- ===== POR QUÉ FUT-TIME ===== -->
   <section class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Por qué jugar con nosotros</span>
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="chip outline">Por qué jugamos distinto</span>
         <h2>Un torneo hecho para jugadores</h2>
         <p>Nos encargamos de toda la logística para que vos solo te preocupés por meter goles.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="card reveal"><div class="ico">🏆</div><h3>Premios reales</h3><p>Trofeos, medallas y premios en efectivo para los campeones y goleadores de cada categoría.</p></div>
-        <div class="card reveal"><div class="ico">📋</div><h3>Organización seria</h3><p>Fixtures publicados, árbitros certificados, tabla de posiciones actualizada y reglas claras.</p></div>
-        <div class="card reveal"><div class="ico">📸</div><h3>Cobertura completa</h3><p>Fotos y videos de cada jornada para que revivás tus mejores jugadas en nuestras redes.</p></div>
-        <div class="card reveal"><div class="ico">🤝</div><h3>Ambiente sano</h3><p>Fair play ante todo. Un espacio para competir, hacer comunidad y pasarla bien.</p></div>
-        <div class="card reveal"><div class="ico">📍</div><h3>Buena ubicación</h3><p>Canchas sintéticas de primera en el centro de Heredia, con parqueo y zona de hidratación.</p></div>
-        <div class="card reveal"><div class="ico">⚡</div><h3>Todo por WhatsApp</h3><p>Inscripción, horarios y resultados directo a tu celu. Sin filas, sin complicaciones.</p></div>
+      <div class="grid g3">
+        <div class="benefit reveal"><div class="ico">🏆</div><h3>Premios reales</h3><p>Trofeos, medallas y premios en efectivo para campeones y goleadores de cada categoría.</p></div>
+        <div class="benefit reveal"><div class="ico">🧑‍⚖️</div><h3>Árbitros certificados</h3><p>Cada partido con arbitraje serio y reglas claras. Acá se juega limpio y parejo.</p></div>
+        <div class="benefit reveal"><div class="ico">📊</div><h3>Todo organizado</h3><p>Fixtures publicados, tabla de posiciones y goleadores siempre al día.</p></div>
+        <div class="benefit reveal"><div class="ico">📸</div><h3>Cobertura completa</h3><p>Fotos y videos de cada jornada para que revivás tus mejores jugadas en redes.</p></div>
+        <div class="benefit reveal"><div class="ico">📍</div><h3>Buena ubicación</h3><p>Canchas sintéticas de primera en el centro de Heredia, con parqueo e hidratación.</p></div>
+        <div class="benefit reveal"><div class="ico">⚡</div><h3>Todo por WhatsApp</h3><p>Inscripción, horarios y resultados directo a tu celu. Sin filas ni complicaciones.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
+  <!-- ===== MOMENTOS / GALERÍA ===== -->
+  <section class="section" id="momentos" style="padding-top:0">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="chip outline">📷 @fut.time.cr</span>
+        <h2>Momentos Fut-Time</h2>
+        <p>Así se vive cada jornada. Seguinos en redes para ver más.</p>
+      </div>
+      <div class="gallery reveal">
+        <div class="tile big t1"><span class="emoji">⚽</span><span>FINAL APERTURA 2025</span></div>
+        <div class="tile t2"><span class="emoji">🏆</span><span>CAMPEONES</span></div>
+        <div class="tile t3"><span class="emoji">🔥</span><span>GOLAZOS</span></div>
+        <div class="tile wide t4"><span class="emoji">🙌</span><span>LA HINCHADA</span></div>
+        <div class="tile t5"><span class="emoji">⚡</span><span>JORNADA 5</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
   <section class="section" style="padding-top:0">
-    <div class="container">
-      <div class="cta-banner reveal">
-        <h2>¿Listo para entrar a la cancha?</h2>
-        <p>Los cupos se llenan rápido. Reservá el lugar de tu equipo hoy mismo.</p>
-        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-          <a href="inscripcion.html" class="btn btn-ghost">Inscribir equipo</a>
-          <a href="https://wa.me/50688888888?text=Hola%20Fut-Time,%20quiero%20info%20del%20torneo" target="_blank" rel="noopener" class="btn btn-wa">💬 Escribir por WhatsApp</a>
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="chip outline">La gente lo dice</span>
+        <h2>Lo que opinan los equipos</h2>
+      </div>
+      <div class="grid g3">
+        <div class="quote reveal">
+          <div class="stars">★★★★★</div>
+          <p>"El torneo mejor organizado en el que hemos jugado. Todo a tiempo, árbitros serios y un ambientazo."</p>
+          <div class="who"><div class="av">JC</div><div><b>Juan Carlos M.</b><small>Capitán · Los Tigres FC</small></div></div>
+        </div>
+        <div class="quote reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Nos inscribimos por WhatsApp en 5 minutos. La cobertura de fotos y videos está buenísima."</p>
+          <div class="who"><div class="av">AS</div><div><b>Andrea S.</b><small>Jugadora · Heredia United</small></div></div>
+        </div>
+        <div class="quote reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Volvemos cada temporada. El nivel es competitivo pero siempre con fair play. 100% recomendado."</p>
+          <div class="who"><div class="av">RD</div><div><b>Randall D.</b><small>DT · Real Cubujuquí</small></div></div>
         </div>
       </div>
     </div>
@@ -117,50 +228,110 @@
 
   <!-- ===== PATROCINADORES ===== -->
   <section class="section" style="padding-top:0">
-    <div class="container">
-      <div class="section-head reveal" style="margin-bottom:34px">
-        <span class="eyebrow">Patrocinadores</span>
-        <h2 style="font-size:1.8rem">Nos apoyan</h2>
+    <div class="wrap">
+      <div class="head reveal" style="margin-bottom:30px">
+        <span class="chip outline">Nos apoyan</span>
+        <h2 style="font-size:1.9rem">Patrocinadores oficiales</h2>
       </div>
       <div class="sponsors reveal">
-        <span class="sponsor-pill">DEPORTES CR</span>
-        <span class="sponsor-pill">HIDRATA+</span>
-        <span class="sponsor-pill">SODA EL GOL</span>
-        <span class="sponsor-pill">SPORT WEAR</span>
-        <span class="sponsor-pill">CANCHA PRO</span>
+        <span class="sponsor">DEPORTES CR</span>
+        <span class="sponsor">HIDRATA+</span>
+        <span class="sponsor">SODA EL GOL</span>
+        <span class="sponsor">SPORT WEAR</span>
+        <span class="sponsor">CANCHA PRO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSCRIPCIÓN ===== -->
+  <section class="section" id="inscripcion" style="padding-top:0">
+    <div class="wrap">
+      <div class="signup reveal">
+        <div class="signup-grid">
+          <div>
+            <span class="chip">¡Cupos limitados!</span>
+            <h2 style="margin-top:16px">Inscribí tu equipo hoy</h2>
+            <p class="lead">Reservá el lugar de tu equipo en la Copa Apertura 2026. Te contactamos en menos de 24 horas.</p>
+            <ul class="perks">
+              <li>Cupo asegurado en tu modalidad</li>
+              <li>Fixture y horarios por WhatsApp</li>
+              <li>Kit de bienvenida para el equipo</li>
+            </ul>
+          </div>
+          <form class="form" id="signupForm" onsubmit="return submitForm(event)">
+            <div class="field">
+              <label for="team">Nombre del equipo</label>
+              <input id="team" type="text" placeholder="Ej. Los Tigres FC" required />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Tu nombre</label>
+                <input id="name" type="text" placeholder="Nombre completo" required />
+              </div>
+              <div class="field">
+                <label for="phone">WhatsApp</label>
+                <input id="phone" type="tel" placeholder="8888-8888" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="mode">Modalidad</label>
+              <select id="mode" required>
+                <option value="">Elegí una modalidad</option>
+                <option>Fut5 — ₡45.000</option>
+                <option>Fut7 — ₡70.000</option>
+                <option>Fut11 — ₡110.000</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-dark btn-lg" style="width:100%;justify-content:center">Enviar pre-inscripción</button>
+            <div class="form-msg" id="formMsg">⚽ ¡Listo! Recibimos tu pre-inscripción. Te escribimos por WhatsApp pronto.</div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container">
+    <div class="wrap">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="brand"><img src="assets/fut-time-logo.jpeg" alt="Fut-Time" /></a>
+          <a href="#top" class="brand"><img src="assets/fut-time-logo.png" alt="Fut-Time" /><b>FUT-TIME CR</b></a>
           <p>Torneos de fútbol amateur en Heredia, Costa Rica. Competí, hacé comunidad y viví el fútbol como se debe.</p>
-          <div class="social-row">
-            <a href="https://www.instagram.com/fut.time.cr/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-            <a href="https://www.facebook.com/Fut.Time.Tournamentes/" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
-            <a href="https://wa.me/50688888888" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <div class="socials">
+            <a href="https://www.instagram.com/fut.time.cr/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/Fut.Time.Tournamentes/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+            </a>
+            <a href="https://wa.me/50688888888" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.64.07-1.7-.85-2.82-1.52-3.94-3.44-.3-.51.3-.48.85-1.58.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.91-2.19-.24-.57-.48-.49-.66-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.74-.71 1.98-1.4.25-.69.25-1.27.18-1.4-.08-.13-.27-.2-.57-.35ZM12 2a10 10 0 0 0-8.55 15.15L2.2 22l4.96-1.3A10 10 0 1 0 12 2Z"/></svg>
+            </a>
           </div>
         </div>
         <div>
           <h4>Torneo</h4>
           <ul>
-            <li><a href="formato.html">Formato y categorías</a></li>
-            <li><a href="formato.html#reglas">Reglas</a></li>
-            <li><a href="calendario.html">Calendario</a></li>
-            <li><a href="calendario.html#posiciones">Tabla de posiciones</a></li>
+            <li><a href="#modalidades">Modalidades</a></li>
+            <li><a href="#como">Cómo funciona</a></li>
+            <li><a href="#torneo">Próximo torneo</a></li>
+            <li><a href="#momentos">Momentos</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contacto</h4>
+          <h4>Inscripción</h4>
           <ul>
-            <li><a href="inscripcion.html">Inscribir equipo</a></li>
+            <li><a href="#inscripcion">Inscribir equipo</a></li>
             <li><a href="https://wa.me/50688888888" target="_blank" rel="noopener">WhatsApp: 8888-8888</a></li>
             <li><a href="mailto:info@futtime.cr">info@futtime.cr</a></li>
-            <li>Heredia, Costa Rica</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Dónde</h4>
+          <ul>
+            <li>Heredia centro, Costa Rica</li>
+            <li>Cancha sintética</li>
+            <li>Sáb. y dom.</li>
           </ul>
         </div>
       </div>
@@ -174,6 +345,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
