@@ -14,26 +14,26 @@ document.querySelectorAll('.nav-links a').forEach(function (a) {
 
 /* ---- Countdown al próximo torneo ---- */
 function initCountdown() {
-  var target = new Date('2026-07-26T09:00:00-06:00').getTime(); // Costa Rica (UTC-6)
-  var $d = document.getElementById('cd-d');
-  var $h = document.getElementById('cd-h');
-  var $m = document.getElementById('cd-m');
-  var $s = document.getElementById('cd-s');
-  if (!$d) return;
+  var target = new Date('2026-07-19T09:00:00-06:00').getTime(); // Liga Fut-Time Invierno · Costa Rica (UTC-6)
+  // Pares de elementos: countdown principal + countdown flotante
+  var els = {
+    d: [document.getElementById('cd-d'), document.getElementById('fc-d')],
+    h: [document.getElementById('cd-h'), document.getElementById('fc-h')],
+    m: [document.getElementById('cd-m'), document.getElementById('fc-m')],
+    s: [document.getElementById('cd-s'), document.getElementById('fc-s')]
+  };
+  if (!els.d[0] && !els.d[1]) return;
 
   function pad(n) { return String(n).padStart(2, '0'); }
+  function set(arr, val) { arr.forEach(function (el) { if (el) el.textContent = pad(val); }); }
 
   function tick() {
     var diff = target - Date.now();
     if (diff < 0) diff = 0;
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor((diff % 86400000) / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    $d.textContent = pad(d);
-    $h.textContent = pad(h);
-    $m.textContent = pad(m);
-    $s.textContent = pad(s);
+    set(els.d, Math.floor(diff / 86400000));
+    set(els.h, Math.floor((diff % 86400000) / 3600000));
+    set(els.m, Math.floor((diff % 3600000) / 60000));
+    set(els.s, Math.floor((diff % 60000) / 1000));
   }
   tick();
   setInterval(tick, 1000);

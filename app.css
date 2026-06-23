@@ -1,6 +1,6 @@
 /* ============================================================
    FUT-TIME CR — "Partido Nocturno" (v4)
-   Fondo de cancha (césped cortado) · tema oscuro · acento lime
+   Fondo estadio · tema navy · acento azul (según el logo)
    Powered by Nuva IA
    ============================================================ */
 
@@ -10,16 +10,17 @@
   --night:    #06160d;   /* secciones más oscuras */
   --night-2:  #0a2114;
 
-  --lime:     #c8ff3c;   /* acento neón */
+  --lime:     #c8ff3c;   /* acento neón (verde) */
   --lime-d:   #a4e016;
-  --green:    #1fbf57;   /* verde de apoyo */
+  --green:    #1fbf57;   /* verde de apoyo (pasto) */
   --gold:     #ffce3a;
+  --silver:   #c7d0e8;
 
   --text:     #effaf1;
   --muted:    #a6c7b3;
   --white:    #ffffff;
 
-  --panel:    rgba(8, 26, 16, 0.72);   /* tarjeta glass */
+  --panel:    rgba(8, 26, 16, 0.72);    /* tarjeta glass */
   --panel-2:  rgba(11, 33, 21, 0.90);
   --line:     rgba(255, 255, 255, 0.10);
   --line-2:   rgba(200, 255, 60, 0.22);
@@ -63,9 +64,11 @@ body::after {
 
 h1, h2, h3, .display {
   font-family: "Anton", Impact, sans-serif;
-  font-weight: 400; line-height: 0.98;
-  text-transform: uppercase; letter-spacing: 0.5px;
+  font-weight: 400; line-height: 1;
+  text-transform: uppercase; letter-spacing: 0.01em;
 }
+/* Titulares grandes Anton: tracking ceñido = más impacto y prolijidad */
+.hero h1, .head h2, .tourney h2, .signup h2 { letter-spacing: -0.01em; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 
@@ -104,7 +107,7 @@ img { display: block; max-width: 100%; }
 /* ---------- NAVBAR ---------- */
 .nav {
   position: sticky; top: 0; z-index: 60;
-  background: rgba(6, 18, 11, 0.78);
+  background: rgba(6, 18, 11, 0.80);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
 }
@@ -187,9 +190,9 @@ img { display: block; max-width: 100%; }
   background: var(--night); color: var(--lime); overflow: hidden; padding: 14px 0;
   border-top: 2px solid var(--line-2); border-bottom: 2px solid var(--line-2);
 }
-.marquee-track { display: inline-flex; gap: 36px; white-space: nowrap; animation: slide 24s linear infinite; font-family: "Anton"; font-size: 1.05rem; letter-spacing: 1px; }
+.marquee-track { display: inline-flex; gap: 36px; white-space: nowrap; animation: slide 24s linear infinite; font-family: "Anton"; font-size: 1.05rem; letter-spacing: 2px; }
 .marquee-track span { display: inline-flex; align-items: center; gap: 36px; }
-.marquee .dot { color: var(--green); }
+.marquee .dot { color: var(--lime); }
 @keyframes slide { from { transform: translateX(0) } to { transform: translateX(-50%) } }
 
 /* ---------- SECCIONES ---------- */
@@ -211,7 +214,7 @@ img { display: block; max-width: 100%; }
 }
 .mode:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--line-2); }
 .mode .num { font-family: "Anton"; font-size: 4.2rem; line-height: 0.85; color: var(--lime); }
-.mode .num small { font-size: 1.1rem; color: var(--muted); display: block; letter-spacing: 1px; }
+.mode .num small { font-size: 1.1rem; color: var(--muted); display: block; letter-spacing: 1.5px; }
 .mode h3 { font-size: 1.45rem; margin: 14px 0 6px; }
 .mode .desc { color: var(--muted); font-size: 0.95rem; font-weight: 500; }
 .mode ul { list-style: none; margin: 18px 0; }
@@ -220,7 +223,7 @@ img { display: block; max-width: 100%; }
 .mode .price { font-family: "Anton"; font-size: 2.1rem; color: var(--white); }
 .mode .price small { font-family: "Manrope"; font-size: 0.85rem; color: var(--muted); font-weight: 600; }
 .mode.featured { background: linear-gradient(180deg, rgba(200,255,60,0.16), var(--panel-2)); border: 1px solid var(--line-2); }
-.mode .tag { position: absolute; top: 22px; right: 22px; background: var(--lime); color: var(--night); font-family: "Anton"; font-size: 0.72rem; padding: 5px 11px; border-radius: 999px; letter-spacing: 1px; }
+.mode .tag { position: absolute; top: 22px; right: 22px; background: var(--lime); color: var(--night); font-family: "Anton"; font-size: 0.72rem; padding: 5px 11px; border-radius: 999px; letter-spacing: 1.5px; }
 
 /* Pasos / cómo funciona */
 .steps { counter-reset: step; }
@@ -243,7 +246,7 @@ img { display: block; max-width: 100%; }
 .benefit p { color: var(--muted); font-size: 0.92rem; font-weight: 500; }
 
 /* ---------- TORNEO (sección + countdown) ---------- */
-.tourney { background: rgba(4, 12, 8, 0.78); position: relative; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tourney { background: rgba(4, 12, 8, 0.82); position: relative; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .tourney::before {
   content: ""; position: absolute; top: 50%; left: 50%; width: 560px; height: 560px;
   transform: translate(-50%,-50%); border: 2px solid rgba(255,255,255,0.10); border-radius: 50%;
@@ -255,6 +258,15 @@ img { display: block; max-width: 100%; }
 .cd { background: rgba(255,255,255,0.05); border: 1px solid var(--line-2); border-radius: 18px; padding: 22px 14px; min-width: 110px; }
 .cd b { font-family: "Anton"; font-size: clamp(2.6rem, 6vw, 3.6rem); color: var(--lime); line-height: 1; display: block; }
 .cd span { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-top: 8px; display: block; }
+
+/* ---------- PRÓXIMOS TORNEOS ---------- */
+.next-tourneys { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: 720px; margin: 0 auto; text-align: left; }
+.nt-card { background: rgba(255,255,255,0.05); border: 1px solid var(--line-2); border-radius: 20px; padding: 24px; position: relative; transition: transform 0.25s, border-color 0.25s; }
+.nt-card:hover { transform: translateY(-5px); border-color: var(--lime); }
+.nt-tag { display: inline-block; background: var(--lime); color: var(--night); font-family: "Anton"; font-size: 0.72rem; padding: 4px 12px; border-radius: 999px; letter-spacing: 1.5px; margin-bottom: 12px; }
+.nt-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+.nt-date, .nt-place { color: var(--muted); font-size: 0.92rem; font-weight: 500; margin-bottom: 6px; }
+.nt-card .btn { margin-top: 16px; }
 
 /* ---------- GALERÍA / MOMENTOS ---------- */
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; gap: 16px; }
@@ -281,17 +293,29 @@ img { display: block; max-width: 100%; }
 
 /* ---------- PATROCINADORES ---------- */
 .sponsors { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
-.sponsor { font-family: "Anton"; font-size: 1.15rem; letter-spacing: 1px; color: var(--muted); background: var(--panel); border: 1px solid var(--line); padding: 14px 26px; border-radius: 14px; }
+.sponsor { font-family: "Anton"; font-size: 1.15rem; letter-spacing: 2px; color: var(--muted); background: var(--panel); border: 1px solid var(--line); padding: 14px 26px; border-radius: 14px; }
 
 /* ---------- INSCRIPCIÓN / FORM ---------- */
-.signup { background: linear-gradient(135deg, var(--lime), var(--green)); border-radius: var(--r-lg); padding: 50px; color: var(--night); position: relative; overflow: hidden; }
-.signup::before { content: ""; position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; border: 2px solid rgba(6,22,13,0.18); border-radius: 50%; }
+/* El recuadro de inscripción ES una cancha de fútbol (pasto + líneas reales) */
+.signup {
+  position: relative; overflow: hidden;
+  border-radius: var(--r-lg); padding: 50px; color: var(--text);
+  border: 1px solid rgba(255,255,255,0.14);
+  background:
+    url("assets/pitch-field.svg") center / 100% 100% no-repeat,
+    repeating-linear-gradient(90deg, #0c4521 0 60px, #093619 60px 120px);
+}
+/* Sombra a la izquierda para que el texto se lea sobre el pasto */
+.signup::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(4,12,8,0.62), rgba(4,12,8,0.10) 52%, rgba(4,12,8,0) 70%);
+}
 .signup-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px; align-items: center; }
-.signup h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
-.signup .lead { color: rgba(6,22,13,0.82); margin: 14px 0 22px; font-weight: 600; }
+.signup h2 { font-size: clamp(2rem, 4.5vw, 3rem); color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+.signup .lead { color: rgba(255,255,255,0.88); margin: 14px 0 22px; font-weight: 600; text-shadow: 0 1px 8px rgba(0,0,0,0.35); }
 .signup .perks { list-style: none; }
-.signup .perks li { padding: 7px 0; font-weight: 700; display: flex; gap: 10px; align-items: center; }
-.signup .perks li::before { content: "✓"; background: var(--night); color: var(--lime); width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 900; }
+.signup .perks li { padding: 7px 0; font-weight: 700; color: #fff; display: flex; gap: 10px; align-items: center; text-shadow: 0 1px 8px rgba(0,0,0,0.35); }
+.signup .perks li::before { content: "✓"; background: var(--lime); color: var(--night); width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 900; flex: 0 0 22px; }
 .form { background: var(--night); border: 1px solid var(--line-2); border-radius: var(--r); padding: 30px; color: var(--text); }
 .field { margin-bottom: 16px; }
 .field label { display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 7px; color: var(--text); }
@@ -356,8 +380,82 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 560px) {
   .g3, .g4, .g2 { grid-template-columns: 1fr; }
+  .next-tourneys { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; }
   .signup { padding: 32px 24px; }
   .hero-mini { gap: 18px; }
+}
+
+/* ---------- WHATSAPP INLINE (footer) ---------- */
+.wa-inline { display: inline-flex; align-items: center; gap: 9px; }
+.wa-inline svg { width: 18px; height: 18px; color: var(--green); flex: 0 0 18px; }
+
+/* ---------- FLOTANTES ---------- */
+/* Botón flotante de WhatsApp */
+.fab-wa {
+  position: fixed; right: 22px; bottom: 22px; z-index: 95;
+  width: 60px; height: 60px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--green); color: #fff;
+  box-shadow: 0 14px 34px -8px rgba(31,191,87,0.6);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.fab-wa svg { width: 32px; height: 32px; }
+.fab-wa::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  border: 2px solid var(--green); animation: fab-pulse 2.2s ease-out infinite;
+}
+.fab-wa:hover { transform: scale(1.08); box-shadow: 0 18px 40px -8px rgba(31,191,87,0.75); }
+@keyframes fab-pulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Countdown flotante */
+.float-cd {
+  position: fixed; left: 22px; bottom: 22px; z-index: 94;
+  display: block; text-decoration: none;
+  background: var(--panel-2); border: 1px solid var(--line-2);
+  border-radius: 18px; padding: 12px 16px;
+  backdrop-filter: blur(12px); box-shadow: var(--shadow);
+  transition: transform 0.25s, border-color 0.25s;
+}
+.float-cd:hover { transform: translateY(-3px); border-color: var(--lime); }
+.fcd-head {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.62rem; letter-spacing: 2px; font-weight: 800;
+  color: var(--lime); text-transform: uppercase;
+}
+.fcd-pulse {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 0 0 rgba(31,191,87,0.6); animation: dot-pulse 1.6s infinite;
+}
+@keyframes dot-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(31,191,87,0.55); }
+  70%  { box-shadow: 0 0 0 7px rgba(31,191,87,0); }
+  100% { box-shadow: 0 0 0 0 rgba(31,191,87,0); }
+}
+.fcd-name { color: var(--white); font-weight: 700; font-size: 0.85rem; margin: 4px 0 8px; }
+.fcd-time { display: flex; gap: 9px; }
+.fcu { text-align: center; min-width: 30px; }
+.fcu b { font-family: "Anton"; font-size: 1.4rem; line-height: 1; color: var(--lime); display: block; }
+.fcu span { font-size: 0.54rem; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-top: 3px; display: block; }
+.fcd-btn {
+  display: block; margin-top: 10px; text-align: center; text-decoration: none;
+  background: var(--lime); color: var(--night);
+  font-family: "Anton"; font-size: 0.8rem; letter-spacing: 1px;
+  padding: 8px 12px; border-radius: 11px;
+  box-shadow: 0 10px 22px -10px rgba(200,255,60,0.55);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.fcd-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -10px rgba(200,255,60,0.7); }
+
+@media (max-width: 560px) {
+  .fab-wa { width: 54px; height: 54px; right: 16px; bottom: 16px; }
+  .fab-wa svg { width: 28px; height: 28px; }
+  .float-cd { left: 12px; right: 84px; bottom: 16px; padding: 10px 13px; }
+  .fcd-time { gap: 6px; justify-content: space-between; }
+  .fcu b { font-size: 1.2rem; }
 }
